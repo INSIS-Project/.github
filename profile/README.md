@@ -1,6 +1,4 @@
-<div align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <a><img alt="microservices" src=https://i.imgur.com/BzkPOy8.png" alt="acme-project-header"></a>
-</div>
+# INSIS Projects
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -19,6 +17,7 @@ The goal of this project is to reengineer the <a href="https://github.com/ana-ra
 
     - <span style="color:#009639"><b>Cloning</b></span>: Multiple instances of each of the previous application must be deployed in Virtual Machines or containers
 
+<!-- REQUIREMENTS -->
 ### **Non-functional Requirements**
 <hr />
 
@@ -50,6 +49,7 @@ NB: External application endpoints should remain HTTP REST.
 
 - Develop a <span style="color:#009639"><b>bootstrap process for the starting services.</b></span> I.e. at any time, a new service can start and its data must be bootstrapped.
 
+<!-- BUILD -->
 ### **Built With**
 <hr/>
 
