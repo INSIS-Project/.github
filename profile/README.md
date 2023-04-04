@@ -1,4 +1,12 @@
-# INSIS Project
+<div align="center" style="margin-top: 1em; margin-bottom: 3em;">
+
+  <h1>INSIS Project</h1>
+  <a><img alt="microservices" src=https://solace.com/wp-content/uploads/2020/05/microservices.png" alt="ethereum.org" width="125"></a>
+  
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-darkgreen.svg?style=flate)](#contributors-url)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+</div>
 
 <!-- ABOUT THE PROJECT -->
 The goal of this project is to reengineer the <a href="https://github.com/ana-rabelo/insis-monolithic-project" target="_blank">ACME application</a> by adopting a **decentralized/distributed** approach
@@ -62,8 +70,6 @@ NB: External application endpoints should remain HTTP REST.
 - [![TypeScript][typescript]][typescript-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors]: https://img.shields.io/github/contributors/ana-rabelo/insis-project.svg?style=for-the-badge
-[contributors-url]: https://github.com/ana-rabelo/insis-project/graphs/contributors
 [docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white&style=flat
 [Docker-url]: https://www.docker.com/
 [RabbitMQ]: https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white&style=flat
