@@ -1,21 +1,19 @@
-# INSIS Projects
+# INSIS Project
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-The goal of this project is to reengineer the <a href="https://github.com/ana-rabelo/insis-monolithic-project" target="_blank">ACME application</a> by adopting a **decentralized/distributed** approach.
+The goal of this project is to reengineer the <a href="https://github.com/ana-rabelo/insis-monolithic-project" target="_blank">ACME application</a> by adopting a **decentralized/distributed** approach
 
 - Two decentralization/distribution dimensions should be addressed:
 
     - <span style="color:#009639"><b>Business domain segregation</b></span>: the monolithic application must be segregated in three distinct but collaborating applications:
     
-        (i) Products; 
+        (i) `Products`; 
         
-        (ii) Reviews;
+        (ii) `Reviews`;
         
-        (iii) Votes.
+        (iii) `Votes`.
 
-    - <span style="color:#009639"><b>Cloning</b></span>: Multiple instances of each of the previous application must be deployed in Virtual Machines or containers
+    - <b>Cloning</b>: Multiple instances of each of the previous application must be deployed in Virtual Machines or containers
 
 <!-- REQUIREMENTS -->
 ### **Non-functional Requirements**
@@ -23,14 +21,16 @@ The goal of this project is to reengineer the <a href="https://github.com/ana-ra
 
 - The following patterns must be adopted:
 
-    - (Strangler fig)
-    - Command-Query Responsibility Segregation (CQRS)
-    - Database-per-Service
-    - Polyglot persistence
-    - Messaging
-    - The Domain Events
-    - Event Sourcing
-    - Saga  <p>
+    - <b>`Strangler fig`</b>: incrementally migrate the monolithic system by gradually replacing specific pieces of functionality with new applications and services.
+    - **`Command-Query Responsibility Segregation (CQRS)`**: separates read and update operations of each microservice for a data store 
+    - **`Database-per-Service`**: keep each microservice’s persistent data private to that service and accessible only via its API. A service’s transactions only involve its database.
+    - **`Polyglot persistence`**: involves using specialized database solutions when developing microservices, so each microservice can use a different type of database than the one used by another microservice.
+    - **`Messaging`**: use asynchronous messaging for inter-service communication. Services communicating by exchanging messages over messaging channels.
+    - **`The Domain Events`**: something that happened in the domain that you want other parts of the same domain (in-process) to be aware of. 
+    - **`Event Sourcing`**: persists the state of a business entity such a Product or a Vote as a sequence of state-changing events. Whenever the state of a business entity changes, a new event is appended to the list of events. Since saving an event is a single operation, it is inherently atomic. The application reconstructs an entity’s current state by replaying the events.
+    - **`Saga`**: a sequence of local transactions. Each local transaction updates the database and publishes a message or event to trigger the next local transaction in the saga. If a local transaction fails because it violates a business rule then the saga executes a series of compensating transactions that undo the changes that were made by the preceding local transactions.
+
+ <p>
 
 
 - AMQP Message Broker (e.g. RabbitMQ) must be adopted for communication between services. 
@@ -64,11 +64,11 @@ NB: External application endpoints should remain HTTP REST.
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors]: https://img.shields.io/github/contributors/ana-rabelo/insis-project.svg?style=for-the-badge
 [contributors-url]: https://github.com/ana-rabelo/insis-project/graphs/contributors
-[docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white
+[docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white&style=flat
 [Docker-url]: https://www.docker.com/
-[RabbitMQ]: https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white
+[RabbitMQ]: https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white&style=flat
 [RabbitMQ-url]: https://www.rabbitmq.com/
-[Spring]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
+[Spring]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white&style=flat
 [Spring-url]: https://spring.io/
-[Typescript]:https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript]:https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&style=flat
 [typescript-url]:https://www.typescriptlang.org/
