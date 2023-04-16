@@ -4,7 +4,7 @@
   <a><img alt="microservices" src=https://solace.com/wp-content/uploads/2020/05/microservices.png" alt="ethereum.org" width="125"></a>
   
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-darkgreen.svg?style=flate)](#contributors-url)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-darkgreen.svg?style=flate)](#contributors-url)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
